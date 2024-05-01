@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/js/color-modes.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.122.0">
+        <title>Navbar Template · Bootstrap v5.3</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars/">
+    
+        
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+    
+          .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+          }
+    
+          .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+          }
+    
+          .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+          }
+    
+          .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+          }
+    
+          .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+          }
+    
+          .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+          }
+    
+          .bd-mode-toggle {
+            z-index: 1500;
+          }
+    
+          .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+          }
+          @font-face {
+  font-family: 'Blackletter';
+  src: url('font/Blackletter.ttf') format('truetype');
+}
+
+.navbar-brand {
+  font-family: 'Blackletter', sans-serif;
+  color: blue;
+  font-size: 35px; 
+}
+
+    </style>
+    
+        <link href="navbars.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light" aria-label="First navbar example">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">MYBOOK</a>
+        <div class="d-none d-md-flex justify-content-end align-items-center gap-2 ms-auto">
+          <a href="./login.html" class="text-dark me-3"><i class='bx bx-user'></i></a>
+          <a href="#" class="text-dark me-3"><i class='bx bx-cart'></i></a>
+      </div>
+      <button class="navbar-toggler collapsed me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+          <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+            <ul class="navbar-nav me-auto mb-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+            </li>            
+              <li class="nav-item">
+                <a class="nav-link" href="./bantuan.html">Bantuan</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Kategori</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Romance</a></li>
+                  <li><a class="dropdown-item" href="#">Comady</a></li>
+                  <li><a class="dropdown-item" href="#">Drama</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <div class="main">
+
+          <div class="main_tag">
+              <h1>WELCOME TO<br><span>BOOK STORE</span></h1>
+
+              <p>
+                Temukan dunia penuh petualangan, pengetahuan, dan inspirasi di rak-rak kami. Dari klasik hingga terbaru, kami hadirkan pilihan bacaan untuk semua selera. Mari bergabung dalam komunitas pencinta literatur dan jelajahi keajaiban kata-kata bersama-sama!
+              </p>
+          </div>
+          <div class="main_img">
+              <img src="assets/image/img1.jpg">
+          </div>
+      </div>
+    </section>
+    <h3 class="text-center">Upcoming Book</h3>
+    <div class="text-center w-50 mx-auto">MYBOOK menghadirkan buku baru bagi para pencinta buku yang selalu mencari petualangan baru dalam halaman-halaman terang. Kami bangga mempersembahkan koleksi terbaru dari penulis-penulis berbakat yang siap menghipnotis Anda dengan cerita-cerita yang penuh keajaiban. Dari misteri yang membingungkan hingga romansa yang memikat, setiap buku di MYBOOk akan membangkitkan rasa penasaran Anda dan membawa Anda pada perjalanan tak terlupakan. Jadilah yang pertama menelusuri karya-karya terbaru dan bergabunglah dengan kami dalam mengeksplorasi keindahan dunia literasi. Temukan kisah berikutnya yang akan mencuri hati Anda hanya di MYBOOk!</div>
+      <div class="row row-cols-6 p-5 overflow-x-auto">
+
+        <div class="col">
+            <div class="card shadow">
+                <img src="assets/image/buku1.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Dilan 1990</h5>
+                  <p class="card-text">bercerita tentang kisah cinta dua remaja Bandung pada tahun 90an. Berawal dari seorang siswa bernama Dilan yang jatuh cinta dengan siswi pindahan dari SMA di Jakarta bernama Milea</p>
+                </div>
+                <div class="card-footer d-md-flex">
+                  <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="1">Detail</button>
+                  <span class="ms-auto text-danger fw-bold d-block text-center">Rp.49.000</span>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Dilan 1991</h5>
+              <p class="card-text">menceritakan kisah tentang Dilan dan Milea yang sudah berpacaran. Milea masih menceritakan kelanjutan kisah pacarannya dengan Dilan pada novel ini setelah peresmian hubungan mereka yang konyol di dalam warung</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.75.650</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku3.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Milea</h5>
+              <p class="card-text"> kisah masa lalu dua orang sepasang kekasih di zaman SMA bernama Dilan dan Milea. Dilan yang asli berasal dari Bandung jatuh cinta pada Milea.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.69.580</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku4.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Mariposa</h5>
+              <p class="card-text">mengisahkan tentang seseorang perempuan yang bernama Natasha Kay Loovi, biasanya di panggil dengan nama panggilan disebut Acha. Acha tersebut sedang berusaha mendekati seorang pria bernama iqbal</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.175.000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku5.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Mariposa 2 part 1</h5>
+              <p class="card-text">Hubungan Iqbal dan Acha mengalami ketegangan setelah kehadiran teman kecil Iqbal yang lama menghilang, menyebabkan kesalahpahaman di antara mereka bertiga.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.100.000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku6.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Mariposa 2 part 2</h5>
+              <p class="card-text">Meninggalnya Mr. Bov menciptakan kehancuran bagi Iqbal. Iqbal menyalahkan Acha atas kepergian papanya itu.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.75.000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku7.jpeg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Pulang Pergi</h5>
+              <p class="card-text">bercerita tentang Bujang yang kembali harus berpetualang setelah pergi dan pulang. Saat Bujang sedang berada di pusara mamak dan bapaknya, Bujang mendapatkan sebuah pesan dari Krestiny Otets, pemimpin brotherhood Bratva</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.75.650</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku8.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Laskar pelangi</h5>
+              <p class="card-text"> cerita tentang bagiamana kesepuluh anak-anak miskin melayu ini menjalani hidup di tengah segala keterbatasan, namun tetap berani bermimpi. Kisah mereka dipenuhi dengan suka, duka, nestapa, dan tentu saja jenaka.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.89.000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku9.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Kita Pergi Hari Ini</h5>
+              <p class="card-text">bercerita tentang lima anak-anak yang tinggal di sebuah kota bernama kota Suara. Mereka kemudian berkeinginan untuk berpetualang di kota Terapung Kucing Luar Biasa yang dihuni makhluk-makhluk aneh.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.72.000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku10.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">The Star and I</h5>
+              <p class="card-text">menceritakan polemik kehidupan Olivia Mitchell. Olivia Mitchell ini merupakan seorang aktris Broadway asal Skotlandia yang sangat berbakat dan terkenal di New York. Olivia sendiri merupakan anak angkat keluarga Mitchell dari sebuah panti asuhan yang ada di New York.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.135.850</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku11.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Ngenest</h5>
+              <p class="card-text">menceritakan tentang Ernest Prakasa,seorang pria keturunan Cina yang merasakan beratnya terlahir sebagai minoritas yang selalu dibully oleh teman-teman sekolahnya sejak dia masih SD. Menjadi korban bully membuatnya bertekad bahwa keturunannya kelak tidak boleh mengalami nasib yang sama.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.20.000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <img src="assets/image/buku12.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Ngenest 2</h5>
+              <p class="card-text">bercerita tentang serba-serbi hidup Ernest Prakasa yang dibagi dalam dua puluh satu cerita pendek di dalamnya yang ringan, santai dan lucu. Bikin ketagihan tapi tidak terasa kosong karena isinya humor berat. Dari mulai menyinggung ras, politik juga sosial.</p>
+            </div>
+            <div class="card-footer d-md-flex">
+              <a class="btn btn-sm btn-primary d-block">Detail</a>
+              <span class="ms-auto text-danger fw-bold d-block text-center">Rp.27.000 ;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="featured_boks">
+
+        <h1>Novel Islami</h1>
+
+        <div class="featured_book_box">
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_6.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>HALAQAH CINTA</h2>
+                    <p class="writer">LIN AIKO</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp.99.000<sub></sub></p>
+                    <a href="#" class="f_btn">Beli</a>
+            </div>
+            
+        </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_17.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Kekasih Impian</h2>
+                    <p class="writer"> Wardah Maulina</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp55.250</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_2.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Ayat-Ayat Cinta</h2>
+                    <p class="writer">Habiburrahman El Shirazy
+                    </p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price"> Rp 35.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div> 
+                <script src="app.js"></script>              
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_3.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Cinta Dalam Diam</h2>
+                    <p class="writer">Shineeminka</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp54.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_4.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Bukan Aku yang Dia Inginkan</h2>
+                    <p class="writer">ari Fatul Husni</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp45.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+            
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_5.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Diantara Dua Sujud</h2>
+                    <p class="writer">Muhammad Irata</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp60.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_7.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Diatas Sajadah cinta</h2>
+                    <p class="writer">Habiburrahman El Shirazy</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp70.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_14.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>HIJAB for SISTER</h2>
+                    <p class="writer">Anastasha Hardi</p>
+                    <div class="categories">Fiksi</div>
+                    <p class="book_price">Rp58.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_9.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Dalam Mihrab Cinta</h2>
+                    <p class="writer">Habiburrahman El Shirazy</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp49.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_10.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Cinta dalam Ikhlas</h2>
+                    <p class="writer">Bayu Adhitya</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp45.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_11.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Cinta di ujung Sajadah</h2>
+                    <p class="writer">Asma Nadia</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp50.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_12.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Santri Pilihan Bunda</h2>
+                    <p class="writer">Salsyabila Falensia </p>
+                    <div class="categories">Drama,Romance</div>
+                    <p class="book_price">Rp69.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_13.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>A dan Z</h2>
+                    <p class="writer">Erlis Kurnianti </p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp57.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_15.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Ku tak Salah Melepasmu</h2>
+                    <p class="writer"> Gugun W</p>
+                    <div class="categories">Romance islami</div>
+                    <p class="book_price">Rp49.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="assets/image/buku_16.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Khadijah</h2>
+                    <p class="writer">Abdul Mun'im Muhammad</p>
+                    <div class="categories">Romance</div>
+                    <p class="book_price">Rp56.000</p>
+                    <a href="#" class="f_btn">Beli</a>
+                </div>               
+              </div>
+        </div>
+    </div>
+</div>
+
+    <div class="featured_boks">
+
+      <h1>Manga</h1>
+
+      <div class="featured_book_box">
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik1.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>One Piece</h2>
+                  <p class="writer">Eiichiro Oda</p>
+                  <div class="categories">Petualangan, fantasi</div>
+                  <p class="book_price">Rp.49.000<sub></sub></p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik2.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>My Hero Academia</h2>
+                  <p class="writer">Kōhei Horikoshi</p>
+                  <div class="categories">Petualangan, fantasi, pahlawan super</div>
+                  <p class="book_price">Rp55.250</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik3.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>SPYxFAMALY</h2>
+                  <p class="writer">Tatsuya Endō
+                  </p>
+                  <div class="categories">Komedi</div>
+                  <p class="book_price"> Rp 55.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik4.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Naruto</h2>
+                  <p class="writer">Masashi Kishimoto</p>
+                  <div class="categories">Aksi, Petualangan, Fantasi</div>
+                  <p class="book_price">Rp.21.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik5.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Boruto</h2>
+                  <p class="writer">Petualangan, fantasi,Komedi</p>
+                  <div class="categories">Zka A</div>
+                  <p class="book_price">Rp.120.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+          
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik6.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Death Note</h2>
+                  <p class="writer"> Tsugumi Ohba dan Takeshi Obata</p>
+                  <div class="categories">misteri dan thriller</div>
+                  <p class="book_price">Rp.74.800</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik7.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Doraemon</h2>
+                  <p class="writer">Fujiko F. Fujio</p>
+                  <div class="categories">	Komedi,Petualangan,Fiksi ilmiah</div>
+                  <p class="book_price">Rp.28.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik8.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Haikyu!!</h2>
+                  <p class="writer">Haruichi Furudate</p>
+                  <div class="categories">olahraga, komedi</div>
+                  <p class="book_price">32.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik9.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Dragon Ball</h2>
+                  <p class="writer">Akira Toriyama</p>
+                  <div class="categories">Action, Adventure, Comedy, Fantasy, Martial Arts,</div>
+                  <p class="book_price">39.999</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik10.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Attack on Titan</h2>
+                  <p class="writer">Hajime Isayama</p>
+                  <div class="categories">Aksi,Fantasi gelap,Pasca-apokaliptik</div>
+                  <p class="book_price">Rp.77.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik11.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Demon Slayer</h2>
+                  <p class="writer">Koyoharu Gotōge</p>
+                  <div class="categories">Adventure,Dark fantasy,Martial arts</div>
+                  <p class="book_price">Rp.32.500</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik12.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Jujutsu Kaisen</h2>
+                  <p class="writer">Gege Akutami</p>
+                  <div class="categories">Petualangan, fantasi gelap, supernatural</div>
+                  <p class="book_price">Rp.38.250</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik13.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>MASHLE vol 1</h2>
+                  <p class="writer">John Deo</p>
+                  <div class="categories">Fantasi, komedi gag</div>
+                  <p class="book_price">Rp.414.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik14.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>BlueLock</h2>
+                  <p class="writer">	Hajime Kōmoto</p>
+                  <div class="categories">sport</div>
+                  <p class="book_price">Rp80.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+
+          </div>
+
+          <div class="featured_book_card">
+
+              <div class="featurde_book_img">
+                  <img src="assets/image/comik15.jpg">
+              </div>
+
+              <div class="featurde_book_tag">
+                  <h2>Dr.Stone</h2>
+                  <p class="writer">Boichi</p>
+                  <div class="categories">Adventure,Post-apocalyptic,Science,fiction</div>
+                  <p class="book_price">Rp60.000</p>
+                  <a href="#" class="f_btn">Beli</a>
+              </div>               
+            </div>
+      </div>
+  </div>
+  <div class="arrivals">
+    <h1>Rekomendasi Buku</h1>
+
+    <div class="arrivals_box">
+
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk1.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>the Chronicles of Narnia</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk2.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>Layangan Putus</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk3.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>Keigo Higashino</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk4.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>Laut Bercerita</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk5.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>Dikta & Hukum</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk6.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>Hujum</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk7.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>Selamat Tinggal</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="arrivals_card">
+            <div class="arrivals_image">
+                <img src="assets/image/rk8.jpg">
+            </div>
+            <div class="arrivals_tag">
+                <p>I Think,I Love You</p>
+                <div class="arrivals_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="arrivals_btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div class="banner">
+</div>
+
+<div class="blog">
+    <h1>Our Blog</h1>
+    <div class="blog_box">
+  
+        <div class="blog_card">
+            <div class="blog_img">
+                <img src="assets/image/blog1.jpg" alt="Blog 1">
+            </div>
+            <div class="blog_tag">
+                <h2>Penulis</h2>
+                <p>
+                    Temukan review buku terbaru dan rekomendasi bacaan menarik di blog kami. Kami menyajikan ulasan mendalam tentang berbagai genre, mulai dari fiksi hingga non-fiksi. Jangan lewatkan kesempatan untuk menemukan buku-buku yang dapat menginspirasi dan menghibur Anda!
+                </p>
+                <div class="blog_icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <i class="fa-solid fa-heart"></i> 
+                </div>
+            </div>
+        </div>
+  
+        <div class="blog_card">
+            <div class="blog_img">
+                <img src="assets/image/blog2.jpg" alt="Blog 2">
+            </div>
+            <div class="blog_tag">
+                <h2>Penulis</h2>
+                <p>
+                    Jelajahi dunia penulis terkenal dan cerita-cerita di balik karya mereka. Dapatkan wawasan tentang proses menulis dan inspirasi di balik setiap karya. Bergabunglah dengan kami dalam perjalanan menemukan keindahan dalam setiap kata dan cerita.
+                </p>
+                <div class="blog_icon">
+                    <i class="fa-solid fa-calendar-days"></i> 
+                    <i class="fa-solid fa-heart"></i> 
+                </div>
+            </div>
+        </div>
+  
+        <div class="blog_card">
+            <div class="blog_img">
+                <img src="assets/image/blog3.webp" alt="Blog 3">
+            </div>
+            <div class="blog_tag">
+                <h2>Penulis</h2>
+                <p>
+                    Dapatkan tips membaca, saran pembelian buku, dan berita terkini tentang dunia literasi. Kami hadir untuk memperkaya pengalaman membaca Anda dan membantu Anda menemukan buku-buku yang sesuai dengan minat dan preferensi Anda.
+                </p>
+                <div class="blog_icon">
+                    <i class="fa-solid fa-calendar-days"></i> 
+                    <i class="fa-solid fa-heart"></i> 
+                </div>
+            </div>
+        </div> 
+    </div>
+  </div>
+  
+
+  </div>
+</div>
+<footer>
+  <div class="footer_main">
+
+    <div class="tag">
+      <a class="navbar-brand" href="./index.html">MYBOOK</a>
+    </div>
+
+      <div class="foot">
+          <h1>Quick Link</h1>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Featured</a>
+          <a href="#">Arrivals</a>
+          <a href="#">Reviews</a>
+          <a href="#">Blog</a>
+          
+      </div>
+
+      <div class="foot">
+          <h1>Contact Info</h1>
+          <a href="#"><i class="fa-solid fa-phone"></i>+94 12 345 6789</a>
+          <a href="#"><i class="fa-solid fa-phone"></i>+94 32 444 699</a>
+          <a href="#"><i class="fa-solid fa-envelope"></i>MYBOOK@gmail.com</a>
+          
+      </div>
+
+      <div class="foot">
+          <h1>Follow Us</h1>
+          <div class="social_link">
+              <i style="color: black;" class="fa-brands fa-facebook-f"></i>
+              <i style="color: black;" class="fa-brands fa-instagram"></i>
+              <i style="color: black;" class="fa-brands fa-twitter"></i>
+              <i style="color: black;" class="fa-brands fa-linkedin-in"></i>
+          </div>
+          
+      </div>
+
+      <div class="foot">
+          <h1>Newsletter</h1>
+          <div class="search_bar">
+              <input type="text" placeholder="You email id here">
+              <button type="submit">Subscribe</button>
+          </div>                
+      </div>            
+      
+  </div>
+
+  <p class="end">Copyright © 2024 By<span> MYBOOK</span></p>
+
+</footer>
+    
+</body>
+</html>

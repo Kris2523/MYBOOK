@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./assets/js/color-modes.js"></script>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+      <meta name="generator" content="Hugo 0.122.0">
+      <title>Navbar Template · Bootstrap v5.3</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars/">
+  
+      
+  
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+  
+        .btn-bd-primary {
+          --bd-violet-bg: #712cf9;
+          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-violet-bg);
+          --bs-btn-border-color: var(--bd-violet-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          --bs-btn-hover-bg: #6528e0;
+          --bs-btn-hover-border-color: #6528e0;
+          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          --bs-btn-active-bg: #5a23c8;
+          --bs-btn-active-border-color: #5a23c8;
+        }
+  
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+  
+        .bd-mode-toggle .dropdown-menu .active .bi {
+          display: block !important;
+        }
+        @font-face {
+font-family: 'Blackletter';
+src: url('font/Blackletter.ttf') format('truetype');
+}
+
+.navbar-brand {
+font-family: 'Blackletter', sans-serif;
+color: blue;
+font-size: 35px; 
+}
+
+  </style>
+  
+      <link href="navbars.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light" aria-label="First navbar example">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">MYBOOK</a>
+      <div class="d-none d-md-flex justify-content-end align-items-center gap-2 ms-auto">
+        <a href="./login.html" class="text-dark me-3"><i class='bx bx-user'></i></a>
+        <a href="#" class="text-dark me-3"><i class='bx bx-cart'></i></a>
+    </div>
+    <button class="navbar-toggler collapsed me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+          <ul class="navbar-nav me-auto mb-2">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+          </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="./bantuan.html">Bantuan</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Kategori</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Romance</a></li>
+                <li><a class="dropdown-item" href="#">Comady</a></li>
+                <li><a class="dropdown-item" href="#">Drama</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </div>
+      </nav>
+    <div class="about">
+    
+      <div class="about_image">
+          <img src="assets/image/about.png">
+      </div>
+      <div class="about_tag">
+          <h1>About Us</h1>
+          <p>
+            Kami adalah Toko Buku yang berkomitmen untuk menyediakan akses yang mudah dan menyenangkan ke dunia literatur. Dengan koleksi luas dari berbagai genre, kami menawarkan buku berkualitas tinggi dari penerbit terpercaya dan penulis ternama. Kami prioritaskan kepuasan pelanggan dengan pelayanan terbaik. Selain itu, kami juga aktif dalam komunitas pembaca melalui berbagai acara literatur. Terima kasih telah memilih kami sebagai mitra dalam perjalanan membaca Anda!
+          </p>
+      </div>
+    
+    </div>
+</body>
+</html>
